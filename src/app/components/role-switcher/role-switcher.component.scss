@@ -1,0 +1,68 @@
+.role-switcher {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+
+  label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .role-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .role-btn {
+    flex: 1;
+    padding: 12px 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      border-color: rgba(255, 255, 255, 0.5);
+    }
+
+    &.active {
+      background-color: rgba(255, 255, 255, 0.25);
+      border-color: white;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  .role-description {
+    margin: 0;
+    font-size: 13px;
+    opacity: 0.9;
+    font-style: italic;
+  }
+}
+
+@media (max-width: 480px) {
+  .role-switcher {
+    padding: 15px;
+
+    .role-buttons {
+      flex-direction: column;
+    }
+
+    .role-btn {
+      width: 100%;
+    }
+  }
+}

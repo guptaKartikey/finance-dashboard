@@ -1,12 +1,25 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { ChartsComponent } from './components/charts/charts.component';
+import { TransactionsComponent } from './components/transactions/transactions.component';
+import { RoleSwitcherComponent } from './components/role-switcher/role-switcher.component';
+import { InsightsComponent } from './components/insights/insights.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [
+    CommonModule,
+    DashboardComponent,
+    ChartsComponent,
+    TransactionsComponent,
+    RoleSwitcherComponent,
+    InsightsComponent
+  ],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrls: ['./app.scss']
 })
 export class App {
-  protected readonly title = signal('finance-dashboard');
+  title = 'Personal Finance Dashboard';
 }

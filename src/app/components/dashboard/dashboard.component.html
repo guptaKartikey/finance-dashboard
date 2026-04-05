@@ -1,0 +1,25 @@
+<div class="dashboard-container">
+  <div class="summary-cards" *ngIf="summary$ | async as summary">
+    <div class="card total-balance">
+      <div class="card-header">Total Balance</div>
+      <div class="card-value" [class.positive]="summary.totalBalance >= 0" [class.negative]="summary.totalBalance < 0">
+        {{ summary.totalBalance | currency }}
+      </div>
+    </div>
+    
+    <div class="card total-income">
+      <div class="card-header">Total Income</div>
+      <div class="card-value positive">+ {{ summary.totalIncome | currency }}</div>
+    </div>
+    
+    <div class="card total-expenses">
+      <div class="card-header">Total Expenses</div>
+      <div class="card-value negative">- {{ summary.totalExpenses | currency }}</div>
+    </div>
+    
+    <div class="card transaction-count">
+      <div class="card-header">Transactions</div>
+      <div class="card-value">{{ summary.transactionCount }}</div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="role-switcher">
+  <label>Current Role:</label>
+  <div class="role-buttons">
+    <button 
+      class="role-btn" 
+      [class.active]="currentRole === 'viewer'"
+      (click)="switchRole('viewer')">
+      👁️ Viewer
+    </button>
+    <button 
+      class="role-btn" 
+      [class.active]="currentRole === 'admin'"
+      (click)="switchRole('admin')">
+      ⚙️ Admin
+    </button>
+  </div>
+  <p class="role-description">
+    {{ currentRole === 'viewer' ? 'You can only view transactions and charts' : 'You can add, edit, and delete transactions' }}
+  </p>
+</div>

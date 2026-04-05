@@ -1,0 +1,45 @@
+<div class="insights-container">
+  <h2>Financial Insights</h2>
+  
+  <div class="insights-grid">
+    <div class="insight-card" *ngIf="insights.highestSpendingCategory">
+      <div class="insight-icon">📊</div>
+      <div class="insight-content">
+        <h3>Highest Spending Category</h3>
+        <p class="insight-value">{{ insights.highestSpendingCategory.category }}</p>
+        <p class="insight-detail">{{ insights.highestSpendingCategory.amount | currency }}</p>
+      </div>
+    </div>
+
+    <div class="insight-card" *ngIf="insights.monthlyComparison">
+      <div class="insight-icon">📈</div>
+      <div class="insight-content">
+        <h3>Monthly Comparison</h3>
+        <p class="insight-value" [class.positive]="insights.monthlyComparison.change <= 0" [class.negative]="insights.monthlyComparison.change > 0">
+          {{ insights.monthlyComparison.change > 0 ? '+' : '' }}{{ insights.monthlyComparison.change.toFixed(1) }}%
+        </p>
+        <p class="insight-detail">vs Previous Month</p>
+      </div>
+    </div>
+
+    <div class="insight-card">
+      <div class="insight-icon">💰</div>
+      <div class="insight-content">
+        <h3>Savings Rate</h3>
+        <p class="insight-value" [class.positive]="insights.savingsRate >= 0" [class.negative]="insights.savingsRate < 0">
+          {{ insights.savingsRate.toFixed(1) }}%
+        </p>
+        <p class="insight-detail">of Income Saved</p>
+      </div>
+    </div>
+
+    <div class="insight-card">
+      <div class="insight-icon">💵</div>
+      <div class="insight-content">
+        <h3>Average Transaction</h3>
+        <p class="insight-value">{{ insights.averageTransaction | currency }}</p>
+        <p class="insight-detail">Per Transaction</p>
+      </div>
+    </div>
+  </div>
+</div>
