@@ -1,60 +1,372 @@
+# 💰 Finance Dashboard (Angular 21)
 
-# FinanceDashboard
+A modern **Finance Dashboard Web App** built using Angular 21 that allows users to track income, expenses, and visualize financial data using interactive charts.
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.6.
+🌐 **Live Demo:** https://vocal-baklava-92b294.netlify.app/
+📦 **GitHub Repo:** https://github.com/guptaKartikey/finance-dashboard.git
 
-## Development server
+---
 
-To start a local development server, run:
+## 🚀 Features
+
+### 📊 Data Visualization
+
+* Line Chart – Monthly balance trend
+* Bar Chart – Income vs Expenses comparison
+* Pie Chart – Category-wise expense breakdown
+* Interactive charts powered by Chart.js
+
+### 💰 Financial Tracking
+
+* Track income and expenses
+* Categorize transactions
+* Monthly financial summary
+
+### ⚡ Real-time Updates
+
+* Reactive state management
+* Dynamic chart updates on transaction changes
+
+### 🎨 UI/UX
+
+* Clean and responsive dashboard
+* Mobile-friendly layout
+* Minimal and intuitive design
+
+---
+
+## 🛠️ Tech Stack
+
+* **Frontend:** Angular 21
+* **Charts:** Chart.js + ng2-charts
+* **Language:** TypeScript
+* **Styling:** SCSS
+* **State Management:** Custom StateService
+* **Deployment:** Netlify
+
+---
+
+## 📂 Project Structure
+
+```bash
+finance-dashboard/
+│── src/
+│   ├── app/
+│   │   ├── components/
+│   │   │   ├── charts/
+│   │   │   ├── dashboard/
+│   │   ├── services/
+│   │   │   └── state.service.ts
+│   │   ├── models/
+│   │   │   └── transaction.model.ts
+│   │   └── app.config.ts
+│   ├── assets/
+│   └── styles/
+│
+│── dist/ (build output)
+│── package.json
+│── angular.json
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+### 🔽 Clone the repository
+
+```bash
+git clone https://github.com/guptaKartikey/finance-dashboard.git
+cd finance-dashboard
+```
+
+---
+
+### 📦 Install dependencies
+
+```bash
+npm install
+```
+
+---
+
+### ▶️ Run locally
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+👉 Open in browser:
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```
+http://localhost:4200/
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+## 🏗️ Build for Production
 
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+👉 Output folder:
 
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
+```
+dist/finance-dashboard/browser
 ```
 
-## Running end-to-end tests
+---
 
-For end-to-end (e2e) testing, run:
+## 🌐 Deployment (Netlify)
+
+This project is deployed using Netlify.
+
+### Steps:
+
+1. Connect GitHub repository
+2. Set build command:
+
+   ```
+   npm run build
+   ```
+3. Set publish directory:
+
+   ```
+   dist/finance-dashboard/browser
+   ```
+
+---
+
+## 📸 Screenshots
+
+(Add screenshots here – dashboard, charts, UI)
+
+---
+
+## 💡 Future Improvements
+
+* 🌙 Dark mode
+* 🔐 Authentication (Login/Register)
+* ☁️ Backend integration (Firebase / Node.js)
+* 📊 Advanced analytics & reports
+* 📱 Mobile app version
+
+---
+
+## 👨‍💻 Author
+
+**Kartik Gupta**
+
+* GitHub: https://github.com/guptaKartikey
+* Project: Finance Dashboard
+
+---
+
+## ⭐ Support
+
+If you like this project:
+
+👉 Give it a ⭐ on GitHub
+👉 Share with others
+
+---
+
+## 📄 License
+
+This project is open-source and available under the MIT License.
+# 💰 Finance Dashboard (Angular 21)
+
+A modern **Finance Dashboard Web App** built using Angular 21 that allows users to track income, expenses, and visualize financial data using interactive charts.
+
+🌐 **Live Demo:** https://personal-finance-dashboard-kartikey.netlify.app/
+📦 **GitHub Repo:** https://github.com/guptaKartikey/finance-dashboard.git
+
+---
+
+## 🚀 Features
+
+### 📊 Data Visualization
+
+* Line Chart – Monthly balance trend
+* Bar Chart – Income vs Expenses comparison
+* Pie Chart – Category-wise expense breakdown
+* Interactive charts powered by Chart.js
+
+### 💰 Financial Tracking
+
+* Track income and expenses
+* Categorize transactions
+* Monthly financial summary
+
+### ⚡ Real-time Updates
+
+* Reactive state management
+* Dynamic chart updates on transaction changes
+
+### 🎨 UI/UX
+
+* Clean and responsive dashboard
+* Mobile-friendly layout
+* Minimal and intuitive design
+
+---
+
+## 🛠️ Tech Stack
+
+* **Frontend:** Angular 21
+* **Charts:** Chart.js + ng2-charts
+* **Language:** TypeScript
+* **Styling:** SCSS
+* **State Management:** Custom StateService
+* **Deployment:** Netlify
+
+---
+
+## 📂 Project Structure
 
 ```bash
-ng e2e
+finance-dashboard/
+├── src/
+│   ├── app/
+│   │   ├── components/
+│   │   │   ├── dashboard/
+│   │   │   │   ├── dashboard.component.ts 
+│   │   │   │   ├── dashboard.component.html 
+│   │   │   │   └── dashboard.component.scss 
+│   │   │   ├── charts/
+│   │   │   │   ├── charts.component.ts 
+│   │   │   │   ├── charts.component.html 
+│   │   │   │   └── charts.component.scss 
+│   │   │   ├── transactions/
+│   │   │   │   ├── transactions.component.ts 
+│   │   │   │   ├── transactions.component.html 
+│   │   │   │   └── transactions.component.scss 
+│   │   │   ├── insights/
+│   │   │   │   ├── insights.component.ts 
+│   │   │   │   ├── insights.component.html 
+│   │   │   │   └── insights.component.scss 
+│   │   │   └── role-switcher/
+│   │   │       ├── role-switcher.component.ts 
+│   │   │       ├── role-switcher.component.html 
+│   │   │       └── role-switcher.component.scss
+│   │   ├── services/
+│   │   │   └── state.service.ts 
+│   │   ├── models/
+│   │   │   └── transaction.model.ts 
+│   │   ├── app.ts 
+│   │   ├── app.html 
+│   │   ├── app.scss 
+│   │   └── other config files
+│   ├── styles.scss 
+│   └── main.ts
+├── dist/ (Production build)
+├── PROJECT_README.md (Comprehensive documentation)
+└── package.json (Dependencies)
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+---
 
-## Additional Resources
+## ⚙️ Installation & Setup
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+### 🔽 Clone the repository
+
+```bash
+git clone https://github.com/guptaKartikey/finance-dashboard.git
+cd finance-dashboard
+```
+
+---
+
+### 📦 Install dependencies
+
+```bash
+npm install
+```
+
+---
+
+### ▶️ Run locally
+
+```bash
+ng serve
+```
+
+👉 Open in browser:
+
+```
+http://localhost:4200/
+```
+
+---
+
+## 🏗️ Build for Production
+
+```bash
+ng build
+```
+
+👉 Output folder:
+
+```
+dist/finance-dashboard/browser
+```
+
+---
+
+## 🌐 Deployment (Netlify)
+
+This project is deployed using Netlify.
+
+### Steps:
+
+1. Connect GitHub repository
+2. Set build command:
+
+   ```
+   npm run build
+   ```
+3. Set publish directory:
+
+   ```
+   dist/finance-dashboard/browser
+   ```
+
+---
+
+## 📸 Screenshots
+
+(Add screenshots here – dashboard, charts, UI)
+
+---
+
+## 💡 Future Improvements
+
+* 🌙 Dark mode
+* 🔐 Authentication (Login/Register)
+* ☁️ Backend integration (Firebase / Node.js)
+* 📊 Advanced analytics & reports
+* 📱 Mobile app version
+
+---
+
+## 👨‍💻 Author
+
+**Kartikey Gupta**
+
+* GitHub: https://github.com/guptaKartikey
+* Project: Finance Dashboard
+
+---
+
+## ⭐ Support
+
+If you like this project:
+
+👉 Give it a ⭐ on GitHub
+👉 Share with others
+
+---
+
+## 📄 License
+
+This project is open-source and available under the MIT License.
